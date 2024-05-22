@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="891.0" stylesheets="@clinicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UpdatePatientController">
+   <children>
+      <MenuBar fx:id="myMenuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Go">
+            <items>
+                  <MenuItem fx:id="homePanel" mnemonicParsing="false" onAction="#handleMenuAction" text="HomePanel" />
+                  <MenuItem fx:id="patientPanel" mnemonicParsing="false" onAction="#handleMenuAction" text="PatientPanel" />
+                  <MenuItem fx:id="schPanel" mnemonicParsing="false" onAction="#handleMenuAction" text="SchedulerPanel " />
+                  <MenuItem fx:id="CAPanel" mnemonicParsing="false" onAction="#handleMenuAction" text="CreateAccount" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="246.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Patient">
+         <font>
+            <Font name="Proxima Nova Extrabold" size="62.0" />
+         </font>
+      </Text>
+      <TextField fx:id="inp_ID" focusTraversable="false" layoutX="50.0" layoutY="153.0" prefHeight="48.0" prefWidth="307.0" promptText="Enter Patient ID" />
+      <TextField fx:id="upd_firstName" focusTraversable="false" layoutX="50.0" layoutY="223.0" prefHeight="48.0" prefWidth="307.0" promptText="First Name" />
+      <TextField fx:id="upd_lastName" focusTraversable="false" layoutX="50.0" layoutY="293.0" prefHeight="48.0" prefWidth="307.0" promptText="Last Name" />
+      <ChoiceBox fx:id="upd_gender" focusTraversable="false" layoutX="50.0" layoutY="363.0" prefHeight="48.0" prefWidth="307.0" styleClass="choiceBox" />
+      <DatePicker fx:id="upd_DOB" focusTraversable="false" layoutX="50.0" layoutY="433.0" prefHeight="48.0" prefWidth="307.0" promptText="DOB" />
+      <TextField fx:id="upd_email" focusTraversable="false" layoutX="538.0" layoutY="153.0" prefHeight="48.0" prefWidth="307.0" promptText="Email" />
+      <TextField fx:id="upd_address" focusTraversable="false" layoutX="538.0" layoutY="223.0" prefHeight="48.0" prefWidth="307.0" promptText="Address" />
+      <ChoiceBox fx:id="upd_doctor" focusTraversable="false" layoutX="538.0" layoutY="293.0" prefHeight="48.0" prefWidth="307.0" styleClass="choiceBox" />
+      <TextField fx:id="upd_phoneNumber" focusTraversable="false" layoutX="538.0" layoutY="363.0" prefHeight="48.0" prefWidth="307.0" promptText="Phone Number" />
+      <Label fx:id="errorMessage" layoutX="560.0" layoutY="437.0" prefHeight="23.0" prefWidth="263.0" />
+      <Button fx:id="but_update" focusTraversable="false" layoutX="620.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="66.0" prefWidth="133.0" text="Udpate" />
+      <Text layoutX="132.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the ID of the patient you want to update, and change the fields you want">
+         <font>
+            <Font name="Proxima Nova Semibold" size="20.0" />
+         </font></Text>
+      <Line endX="877.0000610351562" endY="-2.288818359375E-5" layoutX="14.0" layoutY="97.0" startX="-100.0" />
+   </children>
+</AnchorPane>
