@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="1000.0" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="electricityusagetracker.OverviewController">
+   <children>
+      <JFXTabPane prefHeight="646.0" prefWidth="1000.0" styleClass="table-view" stylesheets="@MainCSS.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Tracker">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="946.0">
+                     <children>
+                        <TableView fx:id="mainTable" layoutX="-1.0" layoutY="121.0" prefHeight="489.0" prefWidth="1000.0">
+                          <columns>
+                            <TableColumn fx:id="appliance" prefWidth="75.0" text="Appliance" />
+                            <TableColumn fx:id="room" prefWidth="75.0" text="Room" />
+                              <TableColumn fx:id="user" prefWidth="85.0" text="User" />
+                              <TableColumn fx:id="consumption" minWidth="100.0" prefWidth="200.0" text="Electricity Consumption" />
+                              <TableColumn fx:id="cost" prefWidth="88.0" text="Cost" />
+                              <TableColumn fx:id="time" prefWidth="99.0" text="Time" />
+                              <TableColumn fx:id="date" prefWidth="75.0" text="Date" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <JFXComboBox fx:id="comboBox_homes" layoutX="14.0" layoutY="69.0" onAction="#getHome" prefHeight="28.0" prefWidth="151.0" promptText="Select Home to View" />
+                        <Text layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Past Activity">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <JFXTabPane />
+               </graphic>
+            </Tab>
+            <Tab text="Usage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="836.0">
+                     <children>
+                        <Text layoutX="24.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Usage (Day, Week, Month)">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="dateUser" layoutX="24.0" layoutY="111.0" promptText="Select Date to view" />
+                        <JFXButton layoutX="227.0" layoutY="108.0" onAction="#searchDailyDate" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="Search Date" textFill="WHITE" />
+                        <JFXTextArea fx:id="detailsTextArea" focusColor="#405aa800" layoutX="179.0" layoutY="185.0" prefHeight="398.0" prefWidth="365.0" unFocusColor="#4d4d4d00" />
+                        <Label fx:id="dayLabel" layoutX="31.0" layoutY="217.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="weekLabel" layoutX="31.0" layoutY="334.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="monthLabel" layoutX="31.0" layoutY="457.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

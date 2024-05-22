@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="electricityusagetracker.HomesController">
+   <children>
+      <Text layoutX="40.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rooms" wrappingWidth="72.66796875">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="addRoom" focusColor="#162161" focusTraversable="false" layoutX="40.0" layoutY="185.0" prefHeight="50.0" prefWidth="118.0" promptText="Add Room" style="-fx-background-radius: 50px;" unFocusColor="BLACK">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="removeRoomUser" focusColor="#162161" focusTraversable="false" layoutX="40.0" layoutY="277.0" prefHeight="50.0" prefWidth="118.0" promptText="Remove Room" style="-fx-background-radius: 50px;" unFocusColor="BLACK">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </JFXTextField>
+      <Text layoutX="417.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appliances" wrappingWidth="125.66796875">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="applianceName" focusColor="#162161" focusTraversable="false" layoutX="414.0" layoutY="236.0" prefHeight="50.0" prefWidth="118.0" promptText="Add Appliance" style="-fx-background-radius: 50px;" unFocusColor="BLACK">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton layoutX="177.0" layoutY="192.0" onAction="#addRoom" prefHeight="36.0" prefWidth="72.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="+ Room" textFill="WHITE" />
+      <JFXButton layoutX="177.0" layoutY="284.0" onAction="#removeRoom" prefHeight="36.0" prefWidth="72.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="- Room" textFill="WHITE" />
+      <JFXButton layoutX="563.0" layoutY="247.0" onAction="#addAppliance" prefHeight="36.0" prefWidth="98.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="+ Appliance" textFill="WHITE" />
+      <JFXTextField fx:id="homeTextField" layoutX="40.0" layoutY="59.0" promptText="Enter Home to edit" />
+      <JFXCheckBox fx:id="checkBox" checkedColor="#0581b5" layoutX="207.0" layoutY="65.0" onAction="#searchRoom" text=" " />
+      <Label fx:id="labelHome" layoutX="40.0" layoutY="41.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" textFill="#c90202" />
+      <JFXComboBox fx:id="comboBox_Room" layoutX="413.0" layoutY="185.0" onAction="#roomOptions" prefHeight="30.0" prefWidth="126.0" promptText="Room" />
+      <Label fx:id="labelRoom" layoutX="40.0" layoutY="165.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" textFill="#019713" />
+      <Label fx:id="labelRemoveRoom" layoutX="40.0" layoutY="265.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" textFill="#019713" />
+      <JFXTextField fx:id="consumption" focusColor="#162161" focusTraversable="false" layoutX="702.0" layoutY="240.0" prefHeight="50.0" prefWidth="118.0" promptText="Appliance" style="-fx-background-radius: 50px;" text="Consumption (kW)" unFocusColor="BLACK">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton layoutX="843.0" layoutY="247.0" onAction="#addConsumption" prefHeight="36.0" prefWidth="118.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="+ Consumption" textFill="WHITE" />
+      <JFXButton layoutX="558.0" layoutY="335.0" onAction="#removeAppliance" prefHeight="36.0" prefWidth="98.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="- Appliance" textFill="WHITE" />
+      <JFXButton layoutX="569.0" layoutY="44.0" onAction="#createHome" prefHeight="36.0" prefWidth="72.0" style="-fx-background-radius: 50px; -fx-background-color: #06a6c9;" text="+ Home" textFill="WHITE" />
+      <JFXTextField fx:id="houseInput" layoutX="411.0" layoutY="49.0" text="Add Home" />
+      <Label fx:id="labelAddHome" layoutX="411.0" layoutY="25.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" />
+      <Label fx:id="labelAppliance" layoutX="410.0" layoutY="223.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" />
+      <Label fx:id="labelConsumption" layoutX="702.0" layoutY="216.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" textFill="#019713" />
+      <JFXTextField fx:id="removeAppliance" focusColor="#162161" focusTraversable="false" layoutX="414.0" layoutY="328.0" prefHeight="50.0" prefWidth="118.0" promptText="Remove Appliance" style="-fx-background-radius: 50px;" unFocusColor="BLACK">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextArea fx:id="roomsTextArea" editable="false" focusColor="#d6d6d600" layoutX="40.0" layoutY="389.0" prefHeight="120.0" prefWidth="226.0" unFocusColor="#c7c5c500" />
+      <JFXTextArea fx:id="appliancesTextArea" editable="false" focusColor="#405aa800" layoutX="418.0" layoutY="424.0" prefHeight="120.0" prefWidth="226.0" unFocusColor="TRANSPARENT" />
+      <Text layoutX="40.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Homes" wrappingWidth="125.66796875">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Rooms" wrappingWidth="125.66796875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="421.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Appliances" wrappingWidth="157.66796875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="labelApplianceRemove" layoutX="410.0" layoutY="308.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="180.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
